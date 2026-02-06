@@ -1,0 +1,32 @@
+data_generation:
+  seed: 0
+  truncation: 1000
+  truncation_generated: 800
+  simulation_generator: "MOTSimulationV1"
+  interval: 0.1
+  p_sensor: 0.8
+  p_target: 0.2
+  dimension: [[-0.5, 0.5], [-0.5, 0.5]]
+  # dimension: [[-0.5, 0.5], [-0.5, 0.5]]
+  sensor_radius: [[0, 0], [0, 0]]
+  target_radius: [[0, 0], [0, 0]]
+  ThreeD: False
+  checkpoints:
+    targets: 30
+    sensors: 30
+  no_of_objects:
+    sensors_lambda: 3
+    min_sensors: 3
+    max_sensors: 4
+    sensor_error: 0
+    targets_lambda: 4
+    min_targets: 2
+    max_targets: 8
+  birth: 0.02
+  death: 0.05
+  noise: 0.001
+  revival_cooldown: 0
+  speed:
+    sensors: [0.002, 0.0002]
+    targets: [0.002, 0.0002]
+  prediction_target: "position_and_velocity"
